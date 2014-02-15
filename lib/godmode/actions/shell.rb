@@ -18,8 +18,7 @@ module Godmode
     end
 
     def state_dependency str
-      say_status("dependency")
-      say(str)
+      say_status("dependency", str)
     end
 
   end
