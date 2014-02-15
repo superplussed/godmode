@@ -4,7 +4,7 @@ module Godmode
     include ::Godmode::Actions
     include ::Rails::Generators::Actions
 
-    source_root File.expand_path('templates', __FILE__)
+    source_root File.expand_path('../templates', __FILE__)
 
     desc "fog", "The Ruby cloud services library"
     def fog
@@ -15,7 +15,7 @@ module Godmode
         [:aws_secret_access_key, "What is your AWS secret access key?"],
         [:bucket_name, "What is your bucket name?"]
       )
-      template("fog/initializer.rb", "config/initializers/fog.rb")
+      template("gem/fog/initializer.rb", "config/initializers/fog.rb")
       summarize("fog has been installed")
     end
 
@@ -23,7 +23,7 @@ module Godmode
     def figaro
       gem "figaro"
       run "bundle"
-      template("figaro/application.yml", "config/application.yml")
+      template("gem/figaro/application.yml", "config/application.yml")
       summarize("figaro has been installed")
     end
 
