@@ -29,7 +29,9 @@ module Godmode
   private
 
     def require_figaro
-      unless file_exists?("config/application.yml")
+      if file_exists?("config/application.yml")
+        say("figaro exists")
+      else
         gdd "gem figaro"
       end
     end
