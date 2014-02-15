@@ -4,7 +4,7 @@ module Godmode
   module Actions
 
     def file_exists? path
-      Pathname.new(path).exists?
+      Pathname.new(path).exist?
     end
   end
 end
