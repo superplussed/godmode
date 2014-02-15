@@ -17,5 +17,10 @@ module Godmode
       ' ' * Godmode::PADDING
     end
 
+    def state_dependency str
+      say_status("dependency")
+      say(str)
+    end
+
   end
 end

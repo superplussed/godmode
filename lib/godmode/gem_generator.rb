@@ -15,6 +15,7 @@ module Godmode
         [:aws_secret_access_key, "What is your AWS secret access key?"],
         [:bucket_name, "What is your bucket name?"]
       )
+      template("fog/initializer.rb", "config/initializers/fog.rb")
       summarize("fog has been installed")
     end
 
@@ -22,13 +23,14 @@ module Godmode
     def figaro
       gem "figaro"
       run "bundle"
-      generate "figaro:install"
+      template("figaro/application.yml", "config/application.yml")
       summarize("figaro has been installed")
     end
 
   private
 
     def require_figaro
+      state_dependency("figaro")
       if file_exists?("config/application.yml")
         say("figaro exists")
       else
