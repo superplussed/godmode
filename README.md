@@ -22,17 +22,12 @@
 
 
 
-GoDmoDe: A generator driven development
-An application generation framework.
+GoDmoDe: A supercharged application generator.
 
 # Description
 ---
 
 ### You know what's annoying?  
-
-gdd make
-gdd gem
-gdd relate
 
 Rewriting a user model for the 10th time, using a combination  of copy and paste of old projects or just rewriting the code from memory.  As developers I'm convinced that we are not doing enough to automate the code that makes up 80% of functionality for modern web apps.  From scheduling, to categories, to social links, to images, to location, there are functionality and interactions that come up again, and again, and again, and again.  So let's:
 
@@ -40,7 +35,7 @@ Rewriting a user model for the 10th time, using a combination  of copy and paste
 
 #### Have respect for your time, for your client's money, and for your sanity: automate!  
 
-With this in mind, I've created an application generator using a constrained set of tools to enable great interoperability between pieces.  The goal is to use interactive command line tools to create models with all of their related parts.  For example:
+With this in mind, I've created an application generator using a constrained set of tools to facilitate great interoperability between pieces.  The goal is to use interactive command line tools to create models with all of their related parts.  For example:
 
 ### gdd gen:user
 

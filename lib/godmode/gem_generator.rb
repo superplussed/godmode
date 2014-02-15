@@ -8,6 +8,7 @@ module Godmode
 
     desc "fog", "The Ruby cloud services library"
     def fog
+      require_figaro
       gem "fog"
       add_environment_variables(
         [:aws_access_key_id, "What is your AWS access key ID?"],
@@ -23,6 +24,14 @@ module Godmode
       run "bundle"
       generate "figaro:install"
       summarize("figaro has been installed")
+    end
+
+  private
+
+    def require_figaro
+      unless file_exists?("config/application.yml")
+        gdd "gem figaro"
+      end
     end
 
   end

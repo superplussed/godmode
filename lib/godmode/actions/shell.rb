@@ -1,15 +1,19 @@
 module Godmode
   module Actions
     def summarize str
-      say("#{spacing}#{Godmode::SUMMARIZE_ICON} #{str}\n", :yellow)
+      say("#{padding}#{Godmode::SUMMARIZE_ICON} #{str}\n", :yellow)
     end
 
     def question str
       padding = Godmode::PADDING
-      ask("#{spacing}#{Godmode::ASK_ICON} #{str}")
+      ask("#{padding}#{Godmode::ASK_ICON} #{str}")
     end
 
-    def spacing
+    def gdd str
+      run "gdd #{str}"
+    end
+
+    def padding
       ' ' * Godmode::PADDING
     end
 
