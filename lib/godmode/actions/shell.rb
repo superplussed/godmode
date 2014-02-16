@@ -26,7 +26,7 @@ module Godmode
     end
 
     def install_gem
-      gem __method__.to_s
+      gem this_method_name
     end
 
   end

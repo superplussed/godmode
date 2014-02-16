@@ -6,6 +6,7 @@ Signal.trap("INT") { exit 1 }
 require 'thor'
 require 'rails/generators'
 require 'godmode'
+require 'godmode/kernel'
 require 'godmode/thor'
 require 'godmode/actions'
 require 'godmode/cli'
