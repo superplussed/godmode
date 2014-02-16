@@ -22,7 +22,7 @@ module Godmode
     desc "figaro", "Simple Rails app configuration"
     def figaro
       gem "figaro"
-      run "bundle"
+      bundle
       template("gem/figaro/application.yml", "config/application.yml")
       summarize("figaro has been installed")
     end

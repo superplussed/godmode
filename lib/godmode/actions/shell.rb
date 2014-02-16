@@ -21,5 +21,9 @@ module Godmode
       say_status("dependency", str)
     end
 
+    def bundle
+      run "bundle", verbose: false
+    end
+
   end
 end
