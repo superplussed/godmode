@@ -1,6 +1,6 @@
 module Kernel
 private
     def this_method_name
-      caller[0] =~ /`([^']*)'/ and $1
+      caller[0][/`([^']*)'/, 1]
     end
 end
