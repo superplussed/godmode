@@ -13,6 +13,20 @@ module Godmode
       gem "rails_admin_link_to_edit"
       gem "cancan"
       install_initializer "rails_admin"
+      summarize "rails_admin"
+    end
+
+    desc "rails_admin_nested_set", "Interface for editing a nested set for rails_admin"
+    def rails_admin_nested_set
+      gem "rails_admin_nested_set"
+      install_initializer "rails_admin_nested_set"
+      summarize "rails_admin_nested_set"
+    end
+
+    desc "awesome_nested_set", "An implementation of the nested set pattern for ActiveRecord models"
+    def awesome_nested_set
+      gem "awesome_nested_set"
+      summarize "awesome_nested_set"
     end
 
     desc "fog", "The Ruby cloud services library"
