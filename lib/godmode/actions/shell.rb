@@ -25,5 +25,9 @@ module Godmode
       run "bundle", verbose: false
     end
 
+    def install_gem
+      gem __method__.to_s
+    end
+
   end
 end
