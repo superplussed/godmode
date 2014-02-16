@@ -1,7 +1,7 @@
 module Godmode
   module Actions
     def summarize str
-      say("#{padding}#{Godmode::SUMMARIZE_ICON} #{str}\n", :yellow)
+      say("#{padding}#{Godmode::SUMMARIZE_ICON} #{str} has been installed\n", :yellow)
     end
 
     def question str
@@ -25,8 +25,8 @@ module Godmode
       run "bundle", verbose: false
     end
 
-    def install_gem
-      gem this_method_name
+    def install_initializer gem_name
+      template("gem/#{gem_name}/initializer.rb", "config/initializer/#{gem_name}.rb")
     end
 
   end

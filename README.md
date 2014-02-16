@@ -37,15 +37,22 @@ Rewriting a user model for the 10th time, using a combination  of copy and paste
 
 With this in mind, I've created an application generator using a constrained set of tools to facilitate great interoperability between pieces.  The goal is to use interactive command line tools to create models with all of their related parts.  For example:
 
-### gdd gen:user
+### gdd build user
 
 * Models: user, role, user_roles   
 * Views: [Authbox](http://) angular.js widget 
 * Custom [devise](http://) controllers
 * Emails sent through [sendgrid](http://)
 * Admin 
+
+### gdd build gallery_image
+
+* Gems: carrierwave, fog, figaro
+* Models: gallery_image
+* Views: _gallery, _form
+* Admin
     
-### gdd gen:category
+### gdd build category
 
 * Subcategory nesting using [awesome_nested_tree](http://)
 * Category management in administration using [rails_admin_nestable](http://) 
